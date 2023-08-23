@@ -1,6 +1,13 @@
-name: Pre-build dev container image
-uses: devcontainers/ci@v0.3
-with:
-  imageName: ghcr.io/afafore/streamlit-devcontainer
-  cacheFrom: ghcr.io/afafore/streamlit-devcontainer
-  push: always
+name: Build Container Image
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Push-And-Build-Conatiner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pre-build dev container image
+        uses: devcontainers/ci@v0.3
+        with:
+          imageName: ghcr.io/example/example-devcontainer
+          cacheFrom: ghcr.io/example/example-devcontainer
+          push: always
