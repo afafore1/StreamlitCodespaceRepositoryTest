@@ -11,6 +11,5 @@ jobs:
        uses: devcontainers/ci@v0.3.1900000328
        with:
          # Image name (including registry)
-         imageName: ghcr.io/afafore1/streamlit-devcontainer
          cacheFrom: ghcr.io/afafore1/streamlit-devcontainer
          push: always
