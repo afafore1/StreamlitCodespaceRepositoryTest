@@ -2,7 +2,7 @@ name: Build Container Image
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Push-And-Build-Conatiner:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
      - name: Dev Container Build and Run Action
@@ -10,5 +10,8 @@ jobs:
        # uses: devcontainers/ci@72700878095f87b851a6c4405a16056caffdc577
        uses: devcontainers/ci@v0.3.1900000328
        with:
+         subfolder: .github
+         imageName: ghcr.io/${{ github.repository }}
+         cacheFrom: ghcr.io/${{ github.repository }}
          # Image name (including registry)
          push: always
