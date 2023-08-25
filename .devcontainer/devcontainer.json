@@ -1,5 +1,5 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/base:alpine",
+  "image": "ghcr.io/afafore1/StreamlitCodespaceRepositoryTest:latest",
   "customizations": {
     "codespaces": {
       "openFiles": [
@@ -24,8 +24,5 @@
       "label": "Application",
       "onAutoForward": "openPreview"
     }
-  },
-  "forwardPorts": [
-    8501
-  ]
+  }
 }
